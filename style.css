@@ -1,0 +1,1022 @@
+html {
+	background-image: url("png/rysunek-1.png");
+	background-size: 89% 89%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+body {
+	margin: 0;
+}
+
+h1 {
+	font-style: normal;
+	font-size: 2.75em;
+	margin: 0;
+	padding: 0;
+	color: rgb(38,38,38);
+	letter-spacing: 0.1em;
+}
+
+h4 {
+	font-weight: 100;
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+	color: rgb(38,38,38);
+}
+
+strong {
+	font-weight: 600;
+}
+
+.logo {
+	height: 3em;
+	width: auto;
+	vertical-align: middle;
+	margin-left: 1em;
+}
+
+.nawigacja {
+	padding: 1em 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 94%;
+	z-index: 100;
+	border-bottom: 3px solid rgb(38,38,38);
+	background: white;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-item {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+    border-radius: 5px;
+	display: inline-block;
+	margin: 0 1em;
+	padding: 0;
+	color: rgba(38,38,38, 0.25);
+}
+
+.nav-item:hover,
+.nav-item:focus {
+	color: rgb(38,38,38);
+	scale: 120%;
+}
+
+.nav-item:active {
+	scale: 85%;
+}
+
+.naglowek-glowny svg {
+	fill: rgb(38, 38, 38);
+}
+
+.naglowek-glowny {
+	display: flex;
+	justify-content: space-between;
+	width: 85%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 94%;
+	margin: 0 auto;
+	margin-top: 3em;
+	padding: 0;
+	z-index: 100;
+	left: 0;
+	right: 0;
+	border-top: 1px solid rgb(38,38,38);
+	background: white;
+}
+
+h6 {
+	font-family: 'Inter', sans-serif;
+	display: flex;
+	align-items: center;
+    font-size: 0.65em;
+	font-weight: 100;
+    padding: 0;
+	margin: 0;
+	padding-top: 0.3em;
+    color: rgb(38,38,38);
+	justify-content: center;
+	height: 1.2em;
+}
+
+#topButton {
+	width: 1.5em;
+	height: 1.5em;
+	display: none;
+	position: fixed;
+	bottom: 4em;
+	right: 3em;
+	z-index: 99;
+	border: 3px solid rgb(38, 38, 38);
+	border-radius: 50%;
+	outline: none;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+	background-color: transparent;
+	font-family: 'Inter', sans-serif;
+	font-size: 2em;
+    color: rgb(38, 38, 38);
+	text-align: center;
+	vertical-align: middle;
+	opacity: 50%;
+	rotate: 180deg;
+    transition: all 0.3s ease;
+}
+
+#topButton:hover {
+	scale: 120%;
+	opacity: 100%;
+}
+
+#topButton:active {
+	scale: 90%;
+}
+
+
+/* SIATKA *//* SIATKA *//* SIATKA *//* SIATKA *//* SIATKA *//* SIATKA *//* SIATKA *//* SIATKA *//* SIATKA */
+
+#projekty {
+	margin-bottom: 7em
+}
+
+section.siatka {
+	padding-top: 8em;
+	list-style: none;
+	text-align: center;
+	width: 61.8%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    margin: 0 auto;
+	z-index: 100;
+}
+
+.menuProjekty {
+    position: relative; /* tytuły na liscie */
+	float: left;
+	margin: 0.5em;
+    max-width: calc(1.3*16em);
+	max-height: calc(1.3*10em);
+	text-align: center;
+	cursor: pointer;
+	box-shadow: none;
+	box-shadow: 0.1em 0.1em 0.5em rgba(38,38,38, 0.2);
+	background-color: rgba(255,255,255, 0.1);
+	backdrop-filter: blur(2px);
+}
+
+.siatka figure img {
+	position: relative;
+	min-height: 100%;
+	max-width: 100%;
+	filter: grayscale(50%);
+}
+
+.siatka figure figcaption {
+	padding: 1.5em;
+	color: rgb(38,38,38);  /* kolory napisow */
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: 0 auto;
+}
+
+.siatka figure h2 {
+	font-family: Arial, sans-serif;
+	font-size: 0.75em;
+	word-spacing: 0.2em;
+	font-weight: 100;
+	color: rgb(38,38,38);
+}
+
+.siatka figure h2 span {
+	font-weight: 1000;
+}
+
+figure.menuProjekty img {
+	opacity: 0.1;  /* przeswit przed najechaniem */
+	-webkit-transition: opacity 2s;
+	transition: opacity 2s;
+}
+
+figure.menuProjekty h2 {
+	margin-top: 20%;
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+#szczegoly-button {
+	display: none;
+	font-size: 0.5em;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: white;
+	position: fixed;
+	bottom: -1em;
+	background-color: rgba(102,102,102, 0.5);
+	border-radius: 1em;
+	text-decoration: none;
+	overflow: hidden;
+	z-index: 1;
+	margin: 4em auto;
+}
+
+#szczegoly-button::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(38,38,38);
+	transform: translateX(-100%);
+	transition: all .3s;
+	z-index: -1;
+}
+
+#szczegoly-button:hover::before {
+	transform: translateX(0);
+}
+
+figure.menuProjekty:hover {
+	img {
+	opacity: 60%;
+	filter: grayscale(0%);
+	transition: opacity 1s, filter 2s;
+	-webkit-transition: opacity 1s, filter 2s;
+	} #szczegoly-button {
+		display: block;
+	}
+}
+
+figure:hover {
+	display: absolute;
+	scale: 145%;
+	z-index: 10000;
+	border: 1px solid rgb(38,38,38);
+	box-shadow: 0.5em 0.5em 2em rgb(38,38,38);
+	transition: scale 1s;
+	-webkit-transition: scale 1s;
+}
+
+figure:active {
+	scale: calc(1.65*0.9*100%);
+	transition: scale 1ms;
+	-webkit-transition: scale 1ms;
+}
+
+.o-mnie {
+	width: 94%;
+	margin: 0 auto;
+	padding: 4em 0;
+}
+
+.elementy {
+	width: 61.8%;
+	margin: 0 auto;
+}
+
+.opisuwa {
+	display: flex;
+	font-size: 1.2em;
+	line-height: 1.75em;
+	text-align: justify;
+	text-indent: 2em;
+	padding: 0;
+	margin-bottom: 4em;
+	background: none;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	border-radius: 2em;
+}
+
+.opisuwa img {
+	height: calc(0.19*1195px);
+	width: calc(0.19*956px);
+	margin: 0;
+	padding: 0;
+	padding-left: 1.25em;
+	opacity: 0.75;
+	filter: grayscale(100%);
+}
+
+.opisuwa:hover {
+	scale: 105%;
+	background: white;
+}
+
+h3 {
+	font-family: 'Inter', sans-serif;
+	font-weight: 600;
+	font-size: 1.6em;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+}
+
+.programy {
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+}
+
+.prog-schem {
+	border: none;
+	background: none;
+	margin: 2em auto;
+	transition: all 0.3s;
+}
+
+.prog-schem-img {
+	height: 5em;
+	width: auto;
+	display: flex;
+	transition: all 0.3s;
+	position: relative;
+}
+
+.prog-schem:hover .prog-schem-img {
+	fill: rgba(255,255,255, 1);
+	scale: 125%;
+}
+
+.prog-schem:hover .tooltip {
+	opacity: 1;
+	position: absolute;
+	z-index: 1000;
+}
+
+#prog-info {
+	text-align: left;
+}
+
+#prog-info strong {
+	font-size: 2em;
+}
+
+.prog-schem ul {
+	font-size: 1.2em;
+	line-height: 1.5em;
+}
+
+strong img {
+	height: 1.75em;
+	vertical-align: middle;
+}
+
+#zapraszam {
+	font-size: 1em;
+	text-align: center;
+	font-weight: 600;
+	line-height: 1.75em;
+	background: none;
+	padding-bottom: 1em;
+}
+
+#kontakt {
+	height: 80vh;
+}
+
+.skontaktuj {
+	background: none;
+	border: none;
+    font-size: 1.25em;
+	font-weight: 100;
+	font-style: normal;
+    letter-spacing: 0.1em;
+	color: rgb(38,38,38);
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	border-radius: 2em;
+}
+
+address ul {
+    margin: 0 auto;
+    list-style: none;
+	padding: 0;
+	padding-top: 3em;
+}
+
+address ul svg {
+	fill: rgb(38,38,38);
+    width: 2em;
+    height: auto;
+    margin-right: 0.75em;
+    vertical-align: middle;
+}
+
+#telefon {
+	padding-bottom: 1em;
+}
+
+.skontaktuj:hover {
+	scale: 105%;
+	background: white;
+	cursor: pointer;
+}
+
+.skontaktuj:active {
+	scale: 95%;
+}
+
+.nowe-okno {
+	background-color: rgba(38,38,38, 0.8);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 101%;
+	position: absolute;
+	z-index: 10000;
+	backdrop-filter: blur(3px);
+}
+
+.okno-projekt {
+	width: 85%;
+	background-color: rgb(38,38,38);
+	border-radius: 1em;
+	margin: 5em auto;
+	padding-bottom: 2em;
+	box-shadow: 0.5em 0.5em 2em rgb(38,38,38);
+}
+
+.okno-projekt h1 {
+	color: white;
+	font-weight: 100;
+}
+
+.informejszyn {
+	border: none;
+	background: none;
+}
+
+.informejszyn svg {
+	width: 1.5em;
+	height: 1.5em;
+	fill: rgba(255,255,255, 0.5);
+	border: none;
+	vertical-align: middle;
+	transition: all 0.3s;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+}
+
+.informejszyn:hover svg {
+	fill: rgba(255,255,255, 1);
+	scale: 125%;
+	overflow: visible;
+}
+
+.tooltip section {
+	display: inline-block;
+	text-align: right;
+	line-height: 1.5em;
+	font-size: 1em;
+}
+
+.tooltip section.prawa {
+	text-align: left;
+	padding-left: 1em;
+}
+
+.informejszyn:hover .tooltip {
+	transform: translateY(2.5px);
+	opacity: 1;
+	position: absolute;
+	z-index: 10000000;
+}
+
+.navi-projekt {
+	margin:0;
+	padding: 0.8em 0;
+	background: transparent;
+}
+
+.naglowek {
+    justify-content: center;
+}
+
+.naglowekProj {
+	width: 100%;
+	text-transform: uppercase;
+	font-weight: 100;
+	font-size: 0.8em;
+    display: flex;
+    justify-content: space-between;
+	padding-top: 0;
+}
+
+.naglowekProj span {
+	vertical-align: middle;
+}
+
+span {
+    padding: 1em
+}
+
+.animated-button {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	padding: 0 4em;
+	border: none;
+	background-color: transparent;
+	color: white;
+	cursor: pointer;
+	overflow: hidden;
+	transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#previous-projekt {
+	border-right: 3px solid rgba(255,255,255, 0.5);
+}
+
+#next-projekt {
+	border-left: 3px solid rgba(255,255,255, 0.5);
+}
+
+#previous-projekt:hover,
+#next-projekt:hover {
+	border-color: white;
+	scale: 105%;
+}
+
+.animated-button svg {
+	position: absolute;
+	top: 0;
+	height: 2.7em;
+	fill: rgba(255,255,255, 0.5);
+	z-index: 9;
+	transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#next-projekt .arr-1 {
+	right: 16px;
+}
+
+#next-projekt .arr-2 {
+	left: -25%;
+}
+
+#previous-projekt .arr-1,
+#previous-projekt .arr-2 {
+	rotate: 180deg;
+}
+
+#previous-projekt .arr-1 {
+	left: 16px;
+}
+
+#previous-projekt .arr-2 {
+	right: -25%;
+}
+
+.animated-button .circle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 20px;
+	height: 20px;
+	background-color: none;
+	opacity: 0;
+	transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.text {
+	color: rgba(255,255,255, 0.5);
+	font-weight: 400;
+	font-size: 0.9em;
+	letter-spacing: 0.3em;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 0;
+}
+
+#previous-projekt .text {
+	text-align: left;
+}
+#next-projekt .text {
+	text-align: right;
+}
+
+.animated-button:hover {
+	box-shadow: 0 0 0 12px transparent;
+}
+
+#next-projekt:hover .arr-1 {
+	right: -25%;
+}
+
+#next-projekt:hover .arr-2 {
+	left: 16px;
+	fill: white;
+}
+
+#previous-projekt:hover .arr-1 {
+	left: -25%;
+}
+
+#previous-projekt:hover .arr-2 {
+	right: 16px;
+	fill: white;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	display: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+.animated-button:active {
+	scale: 0.95;
+	box-shadow: 0 0 0 1px white;
+	border-radius: 1em;
+}
+
+.animated-button:hover .text {
+	color: rgba(255,255,255, 1);
+}
+
+.animated-button:hover .circle {
+	width: 220px;
+	height: 220px;
+	opacity: 1;
+}
+
+.wizki {
+	width: 100.6%;
+	position: relative;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: white;
+}
+
+.gallery {
+	display: flex;
+	position: fixed;
+	bottom: 1vh;
+	width: 100%;
+}
+
+.gallery-tlo {
+	display: flex;
+	justify-content: space-around;
+	width: 75%;
+    margin: 0 auto;
+}
+
+.gallery-item {
+	margin: 0.8em 0.4em;
+	border: 5px solid white;
+	width: 15%;
+	background-color: white;
+	filter: grayscale(100%);
+	box-shadow: 0.3em 0.3em 2em rgb(38,38,38);
+	cursor: pointer;
+}
+
+.gallery-item img {
+	width: 100%;
+	height: auto;
+	opacity: 0.4;
+}
+
+.gallery-item div.desc {
+	font-size: 0.6em;
+	font-weight: 600;
+	padding: 15px;
+	text-align: center;
+	text-transform: uppercase;
+	color: rgb(38,38,38);
+	letter-spacing: 0.2em;
+    transition: all 0.3s;
+}
+
+.gallery-item:hover {
+	border: 5px solid rgb(38,38,38);
+	filter: grayscale(0%);
+	opacity: 1;
+	transition: filter 1s, opacity 1s;
+	img {
+		opacity: 1;
+		transition: 0.3s;
+	}
+}
+
+.gallery-item:active {
+	scale: 0.95;
+	box-shadow: 0 0 0 5px transparent;
+}
+
+.gallery-item.active-thumb {
+    border-color: rgb(38,38,38);
+    opacity: 1;
+    transition: all 0.3s;
+	cursor: default;
+	background-color: rgb(38, 38, 38);
+	img {
+		opacity: 0.25;
+	};
+	div.desc {
+		color: white; 
+		font-weight: 100
+	};
+}
+
+.slide.active {
+	position: relative;
+}
+
+.logo-inside svg {
+	fill: blue;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10000000;
+}
+
+.znacznik svg {
+	fill: red;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 10000000;
+}
+
+#slider {
+	width: 100vh;
+	height: auto;
+	position: relative;
+}
+
+#slider .slide {
+	display: none;
+	width: 100%;
+	flex: 1;
+}
+
+#slider .slide.active {
+	display: block;
+}
+
+.fullscreen-btn {
+	width: 3em;
+	height: 3em;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	cursor: pointer;
+	transition: all 0.3s;
+	position: relative;
+	overflow: hidden;
+}
+
+.fullscreen-btn svg {
+	fill: rgb(38,38,38);
+	width: 100%;
+	height: 100%;
+}
+
+.fullscreen-btn:hover {
+	width: 5em;
+	height: 5em;
+	overflow: visible;
+}
+
+.tooltip {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.85);
+	color: white;
+	padding: 5px 10px;
+	border-radius: 5px;
+	font-size: 0.8em;
+	transition: all 0.3s;
+	opacity: 0;
+}
+
+#fulskrin .tooltip {
+	top: -3em;
+}
+
+#eksit .tooltip {
+	bottom: -3em;
+}
+
+.pelny-ekran {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.exit {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.fullscreen-btn:hover .tooltip {
+	transform: translateY(2.5px);
+	opacity: 1;
+}
+
+.nav-inside svg {
+	height: 5em;
+	width: auto;
+	fill: rgba(38,38,38, 0.15);
+	background-color: none;
+	transition: all 0.3s;
+}
+
+.nav-inside {
+	position: fixed;
+	top: 41vh;
+}
+
+#lewo {
+	left: 7%;
+	rotate: 180deg;
+}
+
+#prawo {
+	right: 7%;
+}
+
+.nav-inside:hover svg {
+	fill: rgba(38,38,38, 0.6);
+	scale: 110%;
+	cursor: pointer;
+}
+
+.nav-inside:active svg {
+	scale: 50%;
+}
+
+.gallery-item,
+.gallery-item * {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.gallery-item:focus,
+.gallery-item:active,
+.gallery-item img:focus,
+.gallery-item img:active {
+    filter: none !important;
+    opacity: 1 !important;
+}
+
+.invi {
+	display: none;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(38,38,38, 0.5);
+    z-index: 100000000;
+	backdrop-filter: blur(0.4em);
+}
+
+.popup-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	width: 50%;
+    background-color: white;
+	border: 3px solid rgb(38, 38, 38);
+    padding: 2em;
+	padding-top: 0.5em;
+	margin: 0;
+    box-shadow: 0 0 2em rgb(38,38,38);
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.guziki {
+	background: white;
+	border: none;
+    color: rgba(38, 38, 38, 0.5);
+	font-weight: 100;
+    padding: 0.75em 1em;
+	margin: 0 1em;
+    cursor: pointer;
+	transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+	font-family: 'Inter', sans-serif;
+	font-size: 1.2em;
+	font-weight: 100;
+	line-height: 1.25em;
+}
+
+#nagl-popup {
+	width: 95%;
+	padding: 0.75em;
+	border-bottom: 1px solid rgb(38,38,38);
+}
+
+h5 {
+	font-family: 'Inter', sans-serif;
+	color:rgb(38, 38, 38);
+	font-size: 1.25em;
+	font-weight: 100;
+	line-height: 1.25em;
+	padding: 4em 0;
+}
+
+.guziki svg {
+	fill: rgba(38, 38, 38, 0.5);
+	width: 1.5em;
+	height: 1.5em;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.guziki:hover {
+	scale: 125%;
+    color: rgb(38, 38, 38);
+}
+
+.guziki:hover svg {
+	fill: rgb(38,38,38);
+}
+
+.guziki:active {
+	scale: 95%;
+}
+
+html {
+	font-family: 'Inter', sans-serif;
+	font-weight: 100;
+	font-style: swap;
+}
+
+@media screen and (max-width: 1080px) {
+	section.siatka {
+		grid-template-columns: 100%;
+		justify-content: center;
+		padding: 0;
+		margin: 0 auto;
+	}
+	h1 {font-size: calc(2.5em*0.5)}
+	h4, li {font-size: calc(1em*0.5)}
+	svg {width: 50%; height: 50%}
+	.ramki {border: none}
+	.tooltip section {font-size: calc(1em*0.75)}
+	.nav-item {font-size: calc(1em*0.5)}
+	.naglowek-glowny {width: 95%}
+	footer ul {width: 95%}
+	header {background-color: white}
+	footer {background-color: white}
+	h5 {font-size: calc(1.25em*0.5)}
+	.guziki {scale: 50%; margin: 0}
+	.popup-window {width: 80%}
+}
+
+@media screen and (max-width: 1600px) {
+	html {background: none}
+	.ramki {border: none}
+	figure:hover {scale: 115%}
+	header {background-color: white}
+	footer {background-color: white}
+}
