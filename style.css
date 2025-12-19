@@ -998,12 +998,12 @@ html {
 		padding: 0;
 		margin: 0 auto;
 	}
-	h1 {font-size: calc(2.5em*0.5)}
+	h1 {font-size: calc(2.5em*0.5); text-align: center;}
 	h4, li {font-size: calc(1em*0.5)}
 	svg {width: 50%; height: 50%}
 	.ramki {border: none}
 	.tooltip section {font-size: calc(1em*0.75)}
-	.nav-item {font-size: calc(1em*0.5)}
+	.nav-item {font-size: calc(1em*0.5); margin: 0 0.2em}
 	.naglowek-glowny {width: 95%}
 	footer ul {width: 95%}
 	header {background-color: white}
@@ -1011,6 +1011,8 @@ html {
 	h5 {font-size: calc(1.25em*0.5)}
 	.guziki {scale: 50%; margin: 0}
 	.popup-window {width: 80%}
+	.text {font-size: calc(0.9em*0.5)}
+	.gallery-item div.desc {font-size: calc(0.6em*0.5)}
 }
 
 @media screen and (max-width: 1600px) {
