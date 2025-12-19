@@ -1023,4 +1023,6 @@ html {
 	figure:hover {scale: 115%}
 	header {background-color: white}
 	footer {background-color: white}
+	#bez-tel {display: none}
 }
+
