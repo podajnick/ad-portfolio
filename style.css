@@ -194,15 +194,15 @@ section.siatka {
 	cursor: pointer;
 	box-shadow: none;
 	box-shadow: 0.1em 0.1em 0.5em rgba(38,38,38, 0.2);
-	background-color: rgba(255,255,255, 0.75);
-	backdrop-filter: blur(2px);
+	background-color: rgba(255,255,255, 0); /* przeswit kafelkow */
+	backdrop-filter: blur(5px);
 }
 
 .siatka figure img {
 	position: relative;
 	min-height: 100%;
 	max-width: 100%;
-	filter: grayscale(50%);
+	filter: grayscale(100%);
 }
 
 .siatka figure figcaption {
@@ -236,8 +236,8 @@ section.siatka {
 
 figure.menuProjekty img {
 	opacity: 0.06;  /* przeswit przed najechaniem */
-	-webkit-transition: opacity 2s;
-	transition: opacity 2s;
+	-webkit-transition: opacity 3s;
+	transition: opacity 3s;
 }
 
 figure.menuProjekty h2 {
